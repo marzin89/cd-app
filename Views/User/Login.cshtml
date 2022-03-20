@@ -1,0 +1,32 @@
+﻿@model CdApp.Models.User
+
+@{
+	// Sidans namn
+	ViewData["title"] = "Logga in";
+}
+
+<h1>Logga in</h1>
+<p><a asp-controller="User" asp-action="Signup">Registrera dig</a></p>
+
+<!-- Inloggningsformulär -->
+<form asp-action="Login">
+	<div class="row">
+		<div class="form-left">
+			<label asp-for="UserName"></label>
+			<input asp-for="UserName" />
+			<span class="error" asp-validation-for="UserName"></span>
+		</div>
+		<div class="form-right">
+			<label asp-for="Password"></label>
+			<input type="password" asp-for="Password" />
+			<span class="error" asp-validation-for="Password"></span>
+		</div>
+		<input type="Submit" value="Logga in" class="btn" />
+
+		<!-- Felmeddelande -->
+		@if(ViewData["loginError"] != null)
+		{
+			<p class="error">@ViewData["loginError"]</p>
+		}
+	</div>
+</form>

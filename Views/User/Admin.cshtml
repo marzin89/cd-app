@@ -1,0 +1,62 @@
+﻿@model CdApp.Models.Cd
+
+@{
+    // Sidans namn
+	ViewData["title"] = "Admin";
+}
+
+<h1>Admin</h1>
+<p><a asp-controller="User" asp-action="Login">Logga ut</a></p>
+
+@if(Model != null)
+{
+    // Skriver ut skivan som ska lånas
+	<table class="table">
+        <tbody>
+            <tr>
+                <td class="table-heading">Namn</td>
+                <td class="table-details">@Model.Name</td>
+            </tr>
+            <tr>
+                <td class="table-heading">Artist</td>
+                <td class="table-details">@Model.Artist</td>
+            </tr>
+            <tr>
+                <td class="table-heading">År</td>
+                <td class="table-details">@Model.Year</td>
+            </tr>
+
+            @if(Model.Length != null)
+            {
+                <tr>
+                    <td class="table-heading">Längd</td>
+                    <td class="table-details">@Model.Length</td>
+                </tr>
+            }
+            
+            @if(ViewData["label"] != null)
+            {
+                <tr>
+                    <td class="table-heading">Skivbolag</td>
+                    <td class="table-details">@Model.Label</td>
+                </tr>
+            }
+
+            <tr>     
+                <td class="table-heading">Genre</td>
+                <td class="table-details">@Model.Genre</td>
+            </tr>
+        </tbody>
+    </table>
+
+    // Formuläret används för att "bekräfta" lånet
+    <form asp-action="Admin">
+        <input type="submit" value="Låna skivan" class="btn" />
+    </form>
+
+    <!-- Datumet då skivan ska lämnas tillbaka (en månads lånetid) -->
+    @if(Model.IsAvailable == false)
+    {
+        <p>Lämnas tillbaka @Model.BackInStock</p>
+    }
+}

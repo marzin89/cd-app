@@ -1,0 +1,49 @@
+﻿@model CdApp.Models.Cd
+
+@{
+    // Sidans namn
+    ViewData["title"] = "Lägg till";
+}
+
+<h1>Lägg till en skiva</h1>
+
+<!-- Formulär för att lägga till skivor -->
+<form asp-action="Create">
+    <div class="row">
+        <div class="form-left">
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="text-input" />
+            <span asp-validation-for="Name" class="error"></span>
+        </div>
+        <div class="form-right">
+            <label asp-for="Artist" class="control-label"></label>
+            <input asp-for="Artist" class="text-input" />
+            <span asp-validation-for="Artist" class="error"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-left">
+            <label asp-for="Year" class="control-label"></label>
+            <input asp-for="Year" class="text-input" />
+            <span asp-validation-for="Year" class="error"></span>
+        </div>
+        <div class="form-right">
+            <label asp-for="Length" class="control-label"></label>
+            <input asp-for="Length" class="text-input" />
+            <span asp-validation-for="Length" class="error"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-left">
+            <label asp-for="Label" class="control-label"></label>
+            <input asp-for="Label" class="text-input" />
+            <span asp-validation-for="Label" class="error"></span>
+        </div>
+        <div class="form-right">
+            <label asp-for="Genre" class="control-label"></label>
+            <input asp-for="Genre" class="text-input" />
+            <span asp-validation-for="Genre" class="error"></span>
+        </div>
+    </div>
+    <input type="submit" value="Lägg till" class="btn" />
+</form>

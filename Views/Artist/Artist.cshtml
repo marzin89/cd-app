@@ -1,0 +1,54 @@
+﻿@model List<CdApp.Models.Cd>
+@{
+	ViewData["title"] = @ViewBag.Name;
+}
+
+<h1>@ViewBag.Name</h1>
+<p>Earl Grey ipsum dolor sit amet Biluochun Jasmine Yerba Mate Longjing 
+	PG Tips PG Tips Nilgiri Chun Mee Rooibos PG Tips Peppermint Yorkshire 
+	Chun Mee Nilgiri Tetley Chai Rooibos Tie Kuan Yin Darjeeling Tie Kuan Yin.</p>
+<p>Ceylon Tetley Russian Caravan Pu Erh Dong Ding Yerba Mate Lapsang Souchong 
+	Tie Kuan Yin Lipton Sencha PG Tips Russian Caravan Earl Grey Earl Grey 
+	Yorkshire Russian Caravan Kukicha Tie Kuan Yin Tetley Tetley.</p>
+
+@if(Model != null)
+{
+	@foreach(var album in Model)
+	{
+		<table class="table">
+            <tbody>
+                <tr>
+                    <td class="table-heading">Namn</td>
+                    <td class="table-details">@album.Name</td>
+                </tr>
+                <tr>
+                    <td class="table-heading">År</td>
+                    <td class="table-details">@album.Year</td>
+                </tr>
+
+                @if(album.Length != null)
+                {
+                    <tr>
+                        <td class="table-heading">Längd</td>
+                        <td class="table-details">@album.Length</td>
+                    </tr>
+                }
+            
+                @if(album.Label != null)
+                {
+                    <tr>
+                        <td class="table-heading">Skivbolag</td>
+                        <td class="table-details">@album.Label</td>
+                    </tr>
+                }
+
+                <tr>     
+                    <td class="table-heading">Genre</td>
+                    <td class="table-details">@album.Genre</td>
+                </tr>
+            </tbody>
+        </table>
+	}
+}
+
+

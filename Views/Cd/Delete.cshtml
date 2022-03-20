@@ -1,0 +1,56 @@
+﻿@model CdApp.Models.Cd
+
+@{
+    // Sidans namn
+    ViewData["title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<p class="error">Är du säker på att du vill radera skivan?</p>
+
+<!-- Skivan som ska raderas -->
+<table class="table">
+    <tbody>
+        <tr>
+            <td class="table-heading">@Html.DisplayNameFor(model => model.Name)</td>
+            <td class="table-details">@Html.DisplayFor(modelItem => modelItem.Name)</td>
+        </tr>
+        <tr>
+            <td class="table-heading">@Html.DisplayNameFor(model => model.Artist)</td>
+            <td class="table-details">@Html.DisplayFor(modelItem => modelItem.Artist)</td>
+        </tr>
+        <tr>
+            <td class="table-heading">@Html.DisplayNameFor(model => model.Year)</td>
+            <td class="table-details">@Html.DisplayFor(modelItem => modelItem.Year)</td>
+        </tr>
+
+        @if(Model.Length != null)
+        {
+            <tr>
+                <td class="table-heading">@Html.DisplayNameFor(model => model.Length)</td>
+                <td class="table-details">@Html.DisplayFor(modelItem => modelItem.Length)</td>
+            </tr>  
+        }
+         
+        @if(Model.Label != null)
+        {
+            <tr>
+                <td class="table-heading">@Html.DisplayNameFor(model => model.Label)</td>
+                <td class="table-details">@Html.DisplayFor(modelItem => modelItem.Label)</td>
+            </tr>   
+        }
+        
+        <tr>     
+            <td class="table-heading">@Html.DisplayNameFor(model => model.Genre)</td>
+            <td class="table-details">@Html.DisplayFor(modelItem => modelItem.Genre)</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Formuläret används för att bekräfta borttagningen -->
+<form id="delete-form" asp-action="Delete">
+    <input type="hidden" asp-for="CdId" />
+    <input type="submit" value="Radera" class="btn btn-danger" />
+</form>
+<p><a asp-action="Index">Tillbaka till startsidan</a></p>

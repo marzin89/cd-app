@@ -1,0 +1,85 @@
+﻿@model CdApp.Models.Cd
+
+@{
+	// Sidans namn
+	ViewData["title"] = "Sök";
+}
+
+<h1>Sök</h1>
+
+<!-- Sökformulär -->
+<form id="search-form" asp-action="Search">
+	<select id="toggle-search-form">
+		<option>Namn</option>
+		<option>Artist</option>
+	</select>
+	<div id="search-name-input">
+		<label asp-for="Name"></label>
+		<input asp-for="Name" />
+		<span class="error" asp-validation-for="Name"></span>
+	</div>
+	<div id="search-artist-input">
+		<label asp-for="Artist"></label>
+		<input asp-for="Artist" />
+		<span class="error" asp-validation-for="Artist"></span>
+	</div>
+	<input type="submit" value="Sök" class="btn" />
+</form>
+
+@if(ViewBag.Result != null)
+{
+	// Läser in resultatet från ViewBag
+	List<CdApp.Models.Cd> result = (List<CdApp.Models.Cd>) ViewBag.Result;
+
+	// Loopar igenom och skriver ut
+	@if(result.Count > 0)
+	{
+		<section>
+			@foreach(var album in result)
+			{
+				<table>
+					<tbody>
+						<tr>
+							<td class="table-heading">Namn</td>
+							<td>@album.Name</td>
+						</tr>
+						<tr>
+							<td class="table-heading">Artist</td>
+							<td>@album.Artist</td>
+						</tr>
+						<tr>
+							<td class="table-heading">År</td>
+							<td>@album.Year</td>
+						</tr>
+
+						@if(album.Length != null)
+						{
+							<tr>
+								<td class="table-heading">Längd</td>
+								<td>@album.Length</td>
+							</tr>
+						}
+
+						@if(album.Label != null)
+						{
+							<tr>
+								<td class="table-heading">Skivbolag</td>
+								<td>@album.Label</td>
+							</tr>
+						}
+
+						<tr>
+							<td class="table-heading">Genre</td>
+							<td>@album.Genre</td>
+						</tr>
+					</tbody>
+				</table>
+			}
+		</section>
+	}
+	// Skriver ut ett felmeddelande om ingen skiva hittades
+	else
+	{
+		<p class="error">Sökningen gav inga träffar</p>
+	}
+}

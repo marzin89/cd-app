@@ -1,0 +1,40 @@
+﻿<!-- Layout -->
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <!-- Dynamiskt sidnamn -->
+    <title>@ViewData["title"]</title>
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+<body>
+    <div id="page-wrapper">
+        <!-- Sidhuvud med navigation -->
+        <header>
+            <div id="header-wrapper">
+                <nav>
+                    <ul>
+                        <li><a class="navlink" asp-controller="Cd" asp-action="Index">Start</a></li>
+                        <li><a class="navlink" asp-controller="Cd" asp-action="Create">Lägg till</a></li>
+                        <li><a class="navlink" asp-controller="Cd" asp-action="Search">Sök</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Innehåll -->
+        <main>
+            @RenderBody()
+        </main>
+
+        <!-- Sidfot -->
+        <footer>
+            <div id="footer-wrapper">
+                <p id="copyright">Copyright 2022</p>
+            </div>
+        </footer>
+    </div>
+    <script src="~/js/main.js"></script>
+</body>
+</html>

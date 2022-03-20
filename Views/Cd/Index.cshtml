@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CdApp.Models.Cd>
+
+@{
+    // Sidans namn
+    ViewData["title"] = "Start";
+}
+
+<h1>Start</h1>
+
+<!-- Loopar igenom och skriver ut befintliga skivor -->
+@foreach(var album in Model)
+{
+    <table class="table">
+        <tbody>
+            <tr>
+                <td class="table-heading">@Html.DisplayNameFor(model => model.Name)</td>
+                <td class="table-details">@Html.DisplayFor(modelItem => album.Name)</td>
+            </tr>
+            <tr>
+                <td class="table-heading">@Html.DisplayNameFor(model => model.Artist)</td>
+                <td class="table-details">@Html.DisplayFor(modelItem => album.Artist)</td>
+            </tr>
+            <tr>
+                <td class="table-heading">@Html.DisplayNameFor(model => model.Year)</td>
+                <td class="table-details">@Html.DisplayFor(modelItem => album.Year)</td>
+            </tr>
+
+            @if(album.Length != null)
+            {
+                <tr>
+                    <td class="table-heading">@Html.DisplayNameFor(model => model.Length)</td>
+                    <td class="table-details">@Html.DisplayFor(modelItem => album.Length)</td>
+                </tr>
+            }
+            
+            @if(album.Label != null)
+            {
+                <tr>
+                    <td class="table-heading">@Html.DisplayNameFor(model => model.Label)</td>
+                    <td class="table-details">@Html.DisplayFor(modelItem => album.Label)</td>
+                </tr>
+            }
+
+            <tr>     
+                <td class="table-heading">@Html.DisplayNameFor(model => model.Genre)</td>
+                <td class="table-details">@Html.DisplayFor(modelItem => album.Genre)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tr>
+            <td class="table-link"><a asp-controller="Cd" asp-route-id="@album.CdId" asp-action="Details">Läs mer</a></td>
+            <td class="table-link"><a asp-controller="Cd" asp-route-id="@album.CdId" asp-action="Edit">Redigera</a></td>
+            <td class="table-link"><a asp-controller="Cd" asp-route-id="@album.CdId" asp-action="Delete">Radera</a></td>
+        </tr>
+    </table>
+    }

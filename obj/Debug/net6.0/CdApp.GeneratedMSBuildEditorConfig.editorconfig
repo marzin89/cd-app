@@ -1,0 +1,72 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CdApp
+build_property.RootNamespace = CdApp
+build_property.ProjectDir = C:\Users\Marco\Documents\Webbutveckling distans\Webbutveckling med .NET\moment3\CdApp\CdApp\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Marco\Documents\Webbutveckling distans\Webbutveckling med .NET\moment3\CdApp\CdApp
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Marco/Documents/Webbutveckling distans/Webbutveckling med .NET/moment3/CdApp/CdApp/Views/Artist/Artist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0XEFydGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marco/Documents/Webbutveckling distans/Webbutveckling med .NET/moment3/CdApp/CdApp/Views/Cd/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2RcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marco/Documents/Webbutveckling distans/Webbutveckling med .NET/moment3/CdApp/CdApp/Views/Cd/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2RcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marco/Documents/Webbutveckling distans/Webbutveckling med .NET/moment3/CdApp/CdApp/Views/Cd/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2RcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marco/Documents/Webbutveckling distans/Webbutveckling med .NET/moment3/CdApp/CdApp/Views/Cd/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2RcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marco/Documents/Webbutveckling distans/Webbutveckling med .NET/moment3/CdApp/CdApp/Views/Cd/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2RcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marco/Documents/Webbutveckling distans/Webbutveckling med .NET/moment3/CdApp/CdApp/Views/Cd/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2RcU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marco/Documents/Webbutveckling distans/Webbutveckling med .NET/moment3/CdApp/CdApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marco/Documents/Webbutveckling distans/Webbutveckling med .NET/moment3/CdApp/CdApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marco/Documents/Webbutveckling distans/Webbutveckling med .NET/moment3/CdApp/CdApp/Views/User/Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marco/Documents/Webbutveckling distans/Webbutveckling med .NET/moment3/CdApp/CdApp/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marco/Documents/Webbutveckling distans/Webbutveckling med .NET/moment3/CdApp/CdApp/Views/User/Signup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTaWdudXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marco/Documents/Webbutveckling distans/Webbutveckling med .NET/moment3/CdApp/CdApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marco/Documents/Webbutveckling distans/Webbutveckling med .NET/moment3/CdApp/CdApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,79 @@
+﻿@model CdApp.Models.Cd
+
+@{
+    // Sidans namn
+    ViewData["title"] = @Model.Name;
+}
+
+<!-- Artistens och skivans namn -->
+<h1>@Model.Artist – @Model.Name</h1>
+
+<!-- Skriver ut den valda skivan -->
+<table class="table">
+    <tbody>
+        <tr>
+            <td class="table-heading">@Html.DisplayNameFor(model => model.Name)</td>
+            <td class="table-details">@Html.DisplayFor(model => model.Name)</td>
+        </tr>
+        <tr>
+            <td class="table-heading">@Html.DisplayNameFor(model => model.Artist)</td>
+            <td class="table-details">@Html.DisplayFor(model => model.Artist)</td>
+        </tr>
+        <tr>
+            <td class="table-heading">@Html.DisplayNameFor(model => model.Year)</td>
+            <td class="table-details">@Html.DisplayFor(model => model.Year)</td>
+        </tr>
+
+        @if(Model.Length != null)
+        {
+            <tr>
+                <td class="table-heading">@Html.DisplayNameFor(model => model.Length)</td>
+                <td class="table-details">@Html.DisplayFor(model => model.Length)</td>
+            </tr>
+        }
+            
+        @if(Model.Label != null)
+        {
+            <tr>
+                <td class="table-heading">@Html.DisplayNameFor(model => model.Label)</td>
+                <td class="table-details">@Html.DisplayFor(model => model.Label)</td>
+            </tr>
+        }
+
+        <tr>     
+            <td class="table-heading">@Html.DisplayNameFor(model => model.Genre)</td>
+            <td class="table-details">@Html.DisplayFor(model => model.Genre)</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Om skivan -->
+<p>Earl Grey ipsum dolor sit amet Biluochun Jasmine Yerba Mate Longjing 
+	PG Tips PG Tips Nilgiri Chun Mee Rooibos PG Tips Peppermint Yorkshire 
+	Chun Mee Nilgiri Tetley Chai Rooibos Tie Kuan Yin Darjeeling Tie Kuan Yin.</p>
+<p>Ceylon Tetley Russian Caravan Pu Erh Dong Ding Yerba Mate Lapsang Souchong 
+	Tie Kuan Yin Lipton Sencha PG Tips Russian Caravan Earl Grey Earl Grey 
+	Yorkshire Russian Caravan Kukicha Tie Kuan Yin Tetley Tetley.</p>
+
+<div id="details-wrapper">
+    @if(Model.IsAvailable)
+    {
+        /* Om skivan inte är utlånad, skickas användaren antingen till admin-sidan eller inloggningssidan,
+            beroende på om hen är inloggad eller inte. */
+        @if(ViewData["SignedIn"] != null)
+        {
+            <p class="details-left"><a asp-controller="User" asp-route-id="Model.CdId" asp-action="Admin">Låna skivan</a></p>
+        }
+        else
+        {
+            <p class="details-left"><a asp-controller="User" asp-route-id="Model.CdId" asp-action="Login">Låna skivan</a></p>
+        }
+    }
+    // Meddelande och datum för återlämning om skivan är utlånad
+    else
+    {
+        <p class="details-left">Skivan är utlånad. Tillbaka @Model.BackInStock</p>
+    }
+
+    <p class="details-right"><a asp-action="Index">Tillbaka till startsidan</a></p>
+</div>
